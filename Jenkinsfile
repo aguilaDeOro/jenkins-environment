@@ -5,6 +5,12 @@ pipeline {
     MACHINE = "Linux"
     CORAZON = "valiente"
     FUERZA = "infinita"
+    MACHINE = """${
+        sh (
+                returnStdout: true, 
+                script: 'uname -n'
+        )
+    }"""
   }
   stages {
     stage('Compiling') {   
