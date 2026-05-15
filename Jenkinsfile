@@ -1,9 +1,9 @@
 pipeline {
   agent any
   environment {
-     NAME = "Jenkins"
-     MACHINE = "Linux"
-     JAVA_OPTS="-Xms128m -Xmx512m"
+    NAME = "jenkins"
+    MACHINE = "Linux"
+    CORAZON = "valiente"
   }
   stages {
     stage('Compiling') {   
@@ -14,6 +14,7 @@ pipeline {
         echo "Compiling the code"
         sh 'javac Param.java'
         echo "The author is ${AUTHOR}"
+        echo "Su corazon es ${CORAZON}"
       }
      }   
     stage('Execute'){
