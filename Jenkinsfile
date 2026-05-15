@@ -4,6 +4,7 @@ pipeline {
     NAME = "jenkins"
     MACHINE = "Linux"
     CORAZON = "valiente"
+    FUERZA = "infinita"
   }
   stages {
     stage('Compiling') {   
@@ -15,6 +16,7 @@ pipeline {
         sh 'javac Param.java'
         echo "The author is ${AUTHOR}"
         echo "Su corazon es ${CORAZON}"
+        echo "Su fuerza es ${FUERZA}"
       }
      }   
     stage('Execute'){
