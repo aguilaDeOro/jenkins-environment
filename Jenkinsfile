@@ -2,7 +2,6 @@ pipeline {
   agent any
   environment {
     NAME = "jenkins"
-    MACHINE = "Linux"
     CORAZON = "valiente"
     FUERZA = "infinita"
     MACHINE = """${
